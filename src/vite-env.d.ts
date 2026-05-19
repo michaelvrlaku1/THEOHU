@@ -1,1 +1,1 @@
-// placeholder
+/// <reference types="vite/client" />
