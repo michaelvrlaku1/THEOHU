@@ -1,1 +1,93 @@
-// placeholder
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 246 33% 9%; /* Deep dark purple/navy */
+    --foreground: 0 0% 100%;
+
+    --card: 246 25% 14%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 246 25% 14%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 262 83% 58%; /* Bright purple */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 246 20% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 246 20% 18%;
+    --muted-foreground: 220 10% 70%;
+
+    --accent: 310 70% 60%; /* Magenta/Pink */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 246 20% 22%;
+    --input: 246 20% 22%;
+    --ring: 262 83% 58%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 246 33% 9%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 246 20% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 246 20% 22%;
+    --sidebar-ring: 262 83% 58%;
+  }
+
+  .dark {
+    /* Same as root since we force dark theme */
+    --background: 246 33% 9%;
+    --foreground: 0 0% 100%;
+    --card: 246 25% 14%;
+    --card-foreground: 0 0% 100%;
+    --popover: 246 25% 14%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 246 20% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 246 20% 18%;
+    --muted-foreground: 220 10% 70%;
+    --accent: 310 70% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 246 20% 22%;
+    --input: 246 20% 22%;
+    --ring: 262 83% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased font-sans;
+  }
+
+  h1, h2, h4, h5, h6 {
+    @apply font-serif;
+  }
+
+  h3 {
+    @apply font-sans;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+}
